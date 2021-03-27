@@ -1,8 +1,5 @@
 <template>
   <div class="container has-text-centered">
-    <h3 class="title is-family-secondary">
-      Login
-    </h3>
     <div class="columns is-centered">
       <div class="column is-4">
         <form
@@ -49,16 +46,7 @@
                 Register
               </button>
             </div>
-            <div
-              class="control"
-              style="margin-left: auto;">
-              <button
-                :class="{'is-loading': isLoading}"
-                class="button is-primary"
-                type="submit">
-                Login
-              </button>
-            </div>
+          
           </div>
           <div class="buttons is-right">
             <button

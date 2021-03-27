@@ -5,41 +5,7 @@
     </h3>
     <div class="columns is-centered">
       <div class="column is-4">
-        <form
-          class="form"
-          @submit.prevent="reset">
-          <div class="field">
-            <div class="control">
-              <label
-                class="label"
-                for="email">Email
-                <input
-                  id="email"
-                  v-model.trim="email"
-                  class="input"
-                  type="email"
-                  placeholder="Your Email"
-                  value="jane@does.com"
-                  required>
-              </label>
-            </div>
-          </div>
-          <div class="field is-grouped">
-            <div class="control">
-         
-            </div>
-            <div
-              class="control"
-              style="margin-left: auto;">
-              <button
-                :class="{'is-loading': isLoading}"
-                class="button is-primary"
-                type="submit">
-                Reset Password
-              </button>
-            </div>
-          </div>
-        </form>
+      
       </div>
     </div>
   </div>

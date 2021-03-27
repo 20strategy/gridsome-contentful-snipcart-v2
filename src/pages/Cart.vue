@@ -10,22 +10,10 @@
       </div>
     </div>
     <div class="container cart">
-      <cart-items-table :cart="cart" />
+      
       <br>
-      <cart-checkout-form
-        v-if="cart.length"
-        :is-loading="isLoading"
-        @checkout="checkout" />
-      <div
-        v-else
-        class="container has-text-centered">
-        <p>To checkout, add some items to cart.</p>
-        <br>
-        <a href="https://puppyous.com"
-          class="button is-primary is-outlined">
-          Browse
-        </a>
-      </div>
+    
+      
     </div>
   </Layout>
 </template>
@@ -34,14 +22,13 @@
 // Packages
 import gql from 'graphql-tag'
 // Components
-import CartItemsTable from '@/components/Cart/CartItemsTable'
-import CartCheckoutForm from '@/components/Cart/CartCheckoutForm'
+
 
 export default {
   metaInfo: {
     title: 'Your Cart'
   },
-  components: { CartItemsTable, CartCheckoutForm },
+
   data: () => ({ isLoading: false }),
   computed: {
     cart () { return this.$store.state.cart }
@@ -63,9 +50,8 @@ export default {
                 webUrl
               }
               checkoutUserErrors {
-                code
-                field
-                message
+                
+               
               }
             }
           }`,
@@ -76,21 +62,12 @@ export default {
         window.location = checkoutCreate.checkout.webUrl
       } catch (error) {
         this.isLoading = false
-        console.error(error)
-        this.$notify({
-          title: 'Whoops...',
-          type: 'danger',
-          message: 'Something went wrong - please try again.'
-        })
+      
+       
       }
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-tr {
-  height: 150px;
-  // display: flex;
-}
-</style>
+
