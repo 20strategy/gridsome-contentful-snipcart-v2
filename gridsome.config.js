@@ -5,11 +5,16 @@ module.exports = {
   templates: {
  
 
-    ContentfulBlog: [
-      {path: '/blog/:slug',
-      component: './src/templates/ContentfulBlog.vue'
+  ContentfulProduct: [
+      {path: '/products/:slug',
+      component: './src/templates/ContentfulProduct.vue'
   }
   ],
+  ContentfulBlog: [
+    {path: '/blog/:slug',
+    component: './src/templates/ContentfulBlog.vue'
+}
+],
   },
   plugins: [
  
@@ -18,6 +23,13 @@ module.exports = {
       options: {
         typeName: 'BlogPost',
         path: './content/blog/**/*.md',
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Products',
+        path: './content/products/**/*.md',
       }
     },{
       use: "@gridsome/source-contentful",

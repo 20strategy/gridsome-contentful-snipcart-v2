@@ -98,28 +98,20 @@
 export default {
   data: () => ({
     isMenuActive: false,
-    searchTerm: ''
+   
   }),
   computed: {
-    isAuthenticated () { return this.$store.getters.isAuthenticated },
+    
     cart () { return this.$store.state.cart },
-    searchResults () {
-      const searchTerm = this.searchTerm
-      if (searchTerm.length < 3) return []
-      return this.$search.search({ query: searchTerm, limit: 5, suggest: true })
-    }
+   
   },
   watch: {
     $route (to, from) {
       this.searchTerm = ''
     }
   },
-  methods: {
-    async logout () {
-      await this.$store.dispatch('logout')
-      this.$router.push('/')
-    }
-  }
+  
+
 }
 </script>
 
