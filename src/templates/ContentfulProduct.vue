@@ -5,9 +5,9 @@
         <div class="column is-three-fifths">
           <figure class="image image is-4by5">
             <v-lazy-image
-              :src="$page.post.picture1.file.url+`?h=550`"
+              :src="$page.product.image.file.url+`?h=550`"
              
-              :alt="$page.post.title" />
+              :alt="$page.product.title" />
           </figure>
           <br>
           <div class="columns">
@@ -16,13 +16,13 @@
         </div>
         <div class="column is-two-fifths">
           <h3 class="title is-family-secondary">
-            {{ $page.post.title }}
+            {{ $page.product.title }}
           </h3>
   <!--  **********************check from here   book mark   -***********-->
           <h5
             
             class="subtitle">
-            $29.00
+           ${{$page.product.price}}.00
           </h5>
         
           <div      
@@ -109,21 +109,28 @@
     </div>
    
       <div class="product-content has-text-centered mt-6"
-           v-html="richTextToHTML($page.post.description)" />
+           v-html="richTextToHTML($page.product.description2)" />
   </Layout>
 </template>
 
 <page-query>
-query ($id:ID!){
-  post: contentfulBlog (id: $id) {
-     id
-     title
-     picture1 {
-      file{
+query ($id:ID!) {
+  product: contentfulProduct(id: $id) {
+    image {
+      file {
         url
       }
     }
-     description 
+    description1
+    description2
+    price
+    path
+    image2 {
+      file {
+        url
+      }
+    }
+    title
   }
 }
 
