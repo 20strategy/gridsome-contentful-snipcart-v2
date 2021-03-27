@@ -26,13 +26,7 @@
           </div>
           <div class="field is-grouped">
             <div class="control">
-              <button
-                class="button is-white"
-                type="submit"
-                @click.prevent="$emit('change', 'login')"
-                @keyup.prevent="$emit('change', 'login')">
-                Back to Login
-              </button>
+         
             </div>
             <div
               class="control"

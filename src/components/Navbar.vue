@@ -1,13 +1,13 @@
 <template>
   <nav
-    class="navbar is-spaced"
+    class="navbar is-spaced container is-max-widescreen"
     role="navigation"
     aria-label="main navigation">
     <div class="navbar-brand">
       <g-link
         to="/"
         class="navbar-item">
-       <span style="color:blue;letter-spacing:1px;font-size:23px;font-weight:bold">PUPPYOUS</span>
+       <span style="color:blue;letter-spacing:1px;font-size:23px;font-weight:bold">puppy<span style="color:red">ous</span></span>
       </g-link>
 
       <button

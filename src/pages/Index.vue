@@ -46,7 +46,7 @@
           class="column is-4 imagehovering">
           <div class="card ">
             <div class="card-image ">
-              <figure class="image is-4by5">
+              <figure class="image is-5by4">
                 <g-link :to="edge.node.path">
                   <v-lazy-image
                   :src="edge.node.picture1.file.url+`?h=500`"
@@ -59,16 +59,14 @@
                   <p class="title is-6 is-family-secondary is-uppercase">
                    {{ edge.node.title }}
                   </p>
-                  <p class="subtitle is-6">
-                    {{edge.node.excerpt}}
-                  </p>
+                
                 </div>
               </div>
               <div class="field is-centered">
                 <div class="">
                   <g-link
                     :to="edge.node.path"
-                    class="button is-primary is-outlined ">
+                    class="button is-danger ">
                     Read More
                   </g-link>
                 </div>

@@ -11,23 +11,7 @@
               :alt="item.image.altText || item.title">
           </figure>
         </td>
-        <td>
-          <g-link
-            :to="item.path"
-            class="is-uppercase has-text-weight-medium">
-            {{ item.productTitle }}
-          </g-link>
-          <p>
-            <small>
-              {{ item.variantTitle !== 'Default Title' ? item.variantTitle : '' }}
-            </small>
-          </p>
-          <p>
-            <small>
-              {{ item.price }}
-            </small>
-          </p>
-        </td>
+   
         <td />
         <td width="300">
           <div class="field has-addons">
@@ -40,12 +24,7 @@
               </button>
             </div>
             <div class="control">
-              <button
-                class="button is-light"
-                @click="decreaseItemQty(item)"
-                @keyup="decreaseItemQty(item)">
-                -
-              </button>
+             
             </div>
             <div class="control">
               <label for="qty">

@@ -6,11 +6,7 @@
     <p>{{ customer.email }}</p>
     <br>
     <div v-if="customer.defaultAddress">
-      <p
-        v-for="(line, i) in customer.defaultAddress.formatted"
-        :key="i">
-        {{ line }}
-      </p>
+    
     </div>
   </div>
 </template>
